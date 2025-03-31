@@ -40,7 +40,7 @@ export interface Tabs {
 
 // Step types
 export interface Step {
-  type: "step";
+  // type: "step";
   id: string;
   title: string;
   content: Form | Tabs;
