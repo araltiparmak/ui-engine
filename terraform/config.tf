@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "my-infra"
-    key    = "ui-forge-engine.tfstate"
+    key    = "ui-engine.tfstate"
     region = "eu-central-1"
   }
   required_version = ">= 1.10.4"
@@ -25,6 +25,6 @@ provider "aws" {
 
 locals {
   github_account = "araltiparmak"
-  repo           = "ui-forge-engine"
-  bucket         = "ui-forge-engine"
+  repo           = "ui-engine"
+  bucket         = "ui-engine"
 }
