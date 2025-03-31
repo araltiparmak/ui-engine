@@ -7,7 +7,7 @@ import { useFormJson } from "./hooks/useFormJson.ts";
 function App() {
   const [content, setContent] = useState<ContentType | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, _] = useState<string>(""); //TODO: handle error
+  const [error] = useState<string>(""); //TODO: handle error
 
   const { data } = useFormJson();
 
