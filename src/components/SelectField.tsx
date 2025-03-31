@@ -1,14 +1,16 @@
-import { Fragment, useState } from 'react';
-import { Listbox, Transition } from '@headlessui/react';
-import { ChevronUpDownIcon, CheckIcon } from '@heroicons/react/20/solid';
-import { Field } from '../types';
+import { Fragment, useState } from "react";
+import { Listbox, Transition } from "@headlessui/react";
+import { ChevronUpDownIcon, CheckIcon } from "@heroicons/react/20/solid";
+import { Field } from "../types";
 
 interface SelectFieldProps {
   field: Field;
 }
 
 export function SelectField({ field }: SelectFieldProps) {
-  const [selected, setSelected] = useState(field.options?.[0] || { value: '', label: 'Select an option' });
+  const [selected, setSelected] = useState(
+    field.options?.[0] || { value: "", label: "Select an option" },
+  );
 
   return (
     <div className="mb-4">
@@ -39,7 +41,7 @@ export function SelectField({ field }: SelectFieldProps) {
                   key={option.value}
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                      active ? 'bg-blue-100 text-blue-900' : 'text-gray-900'
+                      active ? "bg-blue-100 text-blue-900" : "text-gray-900"
                     }`
                   }
                   value={option}
@@ -48,7 +50,7 @@ export function SelectField({ field }: SelectFieldProps) {
                     <>
                       <span
                         className={`block truncate ${
-                          selected ? 'font-medium' : 'font-normal'
+                          selected ? "font-medium" : "font-normal"
                         }`}
                       >
                         {option.label}
@@ -68,4 +70,4 @@ export function SelectField({ field }: SelectFieldProps) {
       </Listbox>
     </div>
   );
-} 
+}

@@ -17,7 +17,7 @@ export interface Section {
 
 // Form types
 export interface Form {
-  type: 'form';
+  type: "form";
   id: string;
   title: string;
   sections: Section[];
@@ -25,14 +25,14 @@ export interface Form {
 
 // Tab types
 export interface Tab {
-  type: 'tab';
+  type: "tab";
   id: string;
   title: string;
   content: Form;
 }
 
 export interface Tabs {
-  type: 'tabs';
+  type: "tabs";
   id: string;
   title: string;
   tabs: Tab[];
@@ -40,7 +40,7 @@ export interface Tabs {
 
 // Step types
 export interface Step {
-  type: 'step';
+  type: "step";
   id: string;
   title: string;
   content: Form | Tabs;
@@ -55,10 +55,10 @@ export interface WizardStep {
 }
 
 export interface Wizard {
-  type: 'wizard';
+  type: "wizard";
   id: string;
   title: string;
   steps: WizardStep[];
 }
 
-export type ContentType = Form | Wizard; 
+export type ContentType = Form | Wizard;

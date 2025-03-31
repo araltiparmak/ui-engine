@@ -1,7 +1,7 @@
-import { Section } from '../types';
-import { TextField } from './TextField';
-import { SelectField } from './SelectField';
-import { CheckboxField } from './CheckboxField';
+import { Section } from "../types";
+import { TextField } from "./TextField";
+import { SelectField } from "./SelectField";
+import { CheckboxField } from "./CheckboxField";
 
 interface FormSectionProps {
   section: Section;
@@ -14,12 +14,12 @@ export function FormSection({ section }: FormSectionProps) {
       <div className="space-y-4">
         {section.fields.map((field) => {
           switch (field.type) {
-            case 'text':
-            case 'email':
+            case "text":
+            case "email":
               return <TextField key={field.id} field={field} />;
-            case 'select':
+            case "select":
               return <SelectField key={field.id} field={field} />;
-            case 'checkbox':
+            case "checkbox":
               return <CheckboxField key={field.id} field={field} />;
             default:
               return null;
@@ -28,4 +28,4 @@ export function FormSection({ section }: FormSectionProps) {
       </div>
     </div>
   );
-} 
+}

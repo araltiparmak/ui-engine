@@ -1,4 +1,4 @@
-import { Field } from '../types';
+import { Field } from "../types";
 
 interface CheckboxFieldProps {
   field: Field;
@@ -19,4 +19,4 @@ export function CheckboxField({ field }: CheckboxFieldProps) {
       </label>
     </div>
   );
-} 
+}

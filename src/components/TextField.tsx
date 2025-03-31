@@ -1,4 +1,4 @@
-import { Field } from '../types';
+import { Field } from "../types";
 
 interface TextFieldProps {
   field: Field;
@@ -7,7 +7,10 @@ interface TextFieldProps {
 export function TextField({ field }: TextFieldProps) {
   return (
     <div className="mb-4">
-      <label className="block text-sm font-medium text-gray-700 mb-1" htmlFor={field.id}>
+      <label
+        className="block text-sm font-medium text-gray-700 mb-1"
+        htmlFor={field.id}
+      >
         {field.label}
         {field.required && <span className="text-red-500 ml-1">*</span>}
       </label>
@@ -20,4 +23,4 @@ export function TextField({ field }: TextFieldProps) {
       />
     </div>
   );
-} 
+}

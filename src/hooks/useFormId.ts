@@ -1,5 +1,4 @@
 export const useFormId = () => {
-
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('formId') || '';
-}
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("formId") || "";
+};

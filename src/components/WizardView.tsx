@@ -1,6 +1,6 @@
-import {useState} from 'react';
-import {Wizard} from '../types';
-import {StepContent} from './StepContent';
+import { useState } from "react";
+import { Wizard } from "../types";
+import { StepContent } from "./StepContent";
 
 interface WizardViewProps {
   wizard: Wizard;
@@ -32,12 +32,12 @@ export function WizardView({ wizard }: WizardViewProps) {
           <div
             key={step.id}
             className={`flex items-center ${
-              index !== wizard.steps.length - 1 ? 'flex-1' : ''
+              index !== wizard.steps.length - 1 ? "flex-1" : ""
             }`}
           >
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                index <= currentStep ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                index <= currentStep ? "bg-blue-500 text-white" : "bg-gray-200"
               }`}
             >
               {index + 1}
@@ -45,7 +45,7 @@ export function WizardView({ wizard }: WizardViewProps) {
             {index !== wizard.steps.length - 1 && (
               <div
                 className={`h-1 flex-1 mx-2 ${
-                  index < currentStep ? 'bg-blue-500' : 'bg-gray-200'
+                  index < currentStep ? "bg-blue-500" : "bg-gray-200"
                 }`}
               />
             )}
@@ -53,8 +53,8 @@ export function WizardView({ wizard }: WizardViewProps) {
         ))}
       </div>
 
-      <StepContent 
-        step={currentStepData} 
+      <StepContent
+        step={currentStepData}
         showSubmit={isLastStep}
         onNext={handleNext}
       />
@@ -85,4 +85,4 @@ export function WizardView({ wizard }: WizardViewProps) {
       </div>
     </div>
   );
-} 
+}

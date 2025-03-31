@@ -1,7 +1,7 @@
-import { Form } from '../types';
-import { FormSection } from './FormSection';
-import { SubmitButton } from './SubmitButton';
-import { CancelButton } from './CancelButton';
+import { Form } from "../types";
+import { FormSection } from "./FormSection";
+import { SubmitButton } from "./SubmitButton";
+import { CancelButton } from "./CancelButton";
 
 interface FormViewProps {
   form: Form;
@@ -16,7 +16,7 @@ export function FormView({ form, showSubmit = true, onNext }: FormViewProps) {
       onNext();
     } else {
       // Handle final form submission
-      console.log('Form submitted');
+      console.log("Form submitted");
     }
   };
 
@@ -27,7 +27,10 @@ export function FormView({ form, showSubmit = true, onNext }: FormViewProps) {
   return (
     <div>
       <h2 className="text-xl font-bold mb-6">{form.title}</h2>
-      <form onSubmit={handleSubmit} className="border border-gray-200 rounded-lg p-6">
+      <form
+        onSubmit={handleSubmit}
+        className="border border-gray-200 rounded-lg p-6"
+      >
         {form.sections.map((section) => (
           <FormSection key={section.id} section={section} />
         ))}
@@ -42,4 +45,4 @@ export function FormView({ form, showSubmit = true, onNext }: FormViewProps) {
       </form>
     </div>
   );
-} 
+}
