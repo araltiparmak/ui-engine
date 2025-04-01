@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-export const useFetchData = (url:string, options = {}) => {
+export const useFetchData = (url: string, options = {}) => {
   return useQuery({
     queryKey: [url],
     queryFn: async () => {
