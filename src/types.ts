@@ -62,3 +62,7 @@ export interface Wizard {
 }
 
 export type ContentType = Form | Wizard;
+
+export type FormData = {
+  [key: string]: string;
+};
