@@ -3,10 +3,12 @@ import { ContentType } from "./types";
 import { FormView } from "./components/FormView";
 import { WizardView } from "./components/WizardView";
 import { useFormJson } from "./hooks/useFormJson.ts";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+import { useFormId } from "./hooks/useFormId.ts";
 
 function FormPage() {
-  const { formId } = useParams();
+  // const { formId } = useParams();
+  const formId = useFormId();
 
   const [content, setContent] = useState<ContentType | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
