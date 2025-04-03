@@ -1,8 +1,9 @@
 import { FormData, Section } from "../types";
-import { TextField } from "./TextField";
-import { SelectField } from "./SelectField";
-import { CheckboxField } from "./CheckboxField";
+import { TextField } from "./fields/TextField.tsx";
+import { SelectField } from "./fields/SelectField.tsx";
+import { CheckboxField } from "./fields/CheckboxField.tsx";
 import { UseFormRegister } from "react-hook-form";
+import { TextAreaField } from "./fields/TextArea.tsx";
 
 interface FormSectionProps {
   section: Section;
@@ -23,8 +24,21 @@ export function FormSection({ section, register }: FormSectionProps) {
           switch (field.type) {
             case "text":
             case "email":
+            case "tel":
+            case "number":
+            case "password":
+            case "url":
+            case "date":
               return (
-                <TextField register={register} key={field.id} field={field} />
+                <TextField key={field.id} register={register} field={field} />
+              );
+            case "textarea":
+              return (
+                <TextAreaField
+                  key={field.id}
+                  register={register}
+                  field={field}
+                />
               );
             case "select":
               return <SelectField key={field.id} field={field} />;

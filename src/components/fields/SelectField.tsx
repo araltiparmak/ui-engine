@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { ChevronUpDownIcon, CheckIcon } from "@heroicons/react/20/solid";
-import { Field } from "../types";
+import { Field } from "../../types.ts";
 
 interface SelectFieldProps {
   field: Field;

@@ -1,7 +1,6 @@
 import { Form, FormData } from "../types";
 import { FormSection } from "./FormSection";
 import { SubmitButton } from "./SubmitButton";
-import { CancelButton } from "./CancelButton";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Result } from "./Result.tsx";
@@ -33,13 +32,8 @@ export function FormView({ form }: FormViewProps) {
     }
   };
 
-  const handleCancel = () => {
-    // Handle cancellation
-  };
-
   return (
     <div>
-      <h2 className="text-xl font-bold mb-6">{form.title}</h2>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="border border-gray-200 rounded-lg p-6"
@@ -49,7 +43,7 @@ export function FormView({ form }: FormViewProps) {
         ))}
         <div className="flex justify-end mt-6">
           <SubmitButton />
-          <CancelButton onClick={handleCancel} />
+          {/*<CancelButton onClick={handleCancel} />*/}
         </div>
 
         {submitted && (

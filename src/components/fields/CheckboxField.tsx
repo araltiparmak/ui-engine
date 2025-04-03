@@ -1,4 +1,4 @@
-import { Field } from "../types";
+import { Field } from "../../types.ts";
 
 interface CheckboxFieldProps {
   field: Field;

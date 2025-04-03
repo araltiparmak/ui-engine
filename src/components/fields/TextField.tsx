@@ -1,12 +1,12 @@
-import { Field, FormData } from "../types";
+import { TextFieldProps, FormData } from "../../types.ts";
 import { UseFormRegister } from "react-hook-form";
 
-interface TextFieldProps {
-  field: Field;
+interface ComponentProps {
+  field: TextFieldProps;
   register: UseFormRegister<FormData>;
 }
 
-export function TextField({ field, register }: TextFieldProps) {
+export function TextField({ field, register }: ComponentProps) {
   return (
     <div className="mb-4">
       <label
@@ -17,6 +17,7 @@ export function TextField({ field, register }: TextFieldProps) {
         {field.required && <span className="text-red-500 ml-1">*</span>}
       </label>
       <input
+        placeholder={field.placeholder}
         {...register(field.id, { required: field.required })}
         id={field.id}
         type={field.type}

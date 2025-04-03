@@ -1,4 +1,10 @@
-// Common types
+interface BaseField {
+  id: string;
+  label: string;
+  type: string;
+  required?: boolean;
+}
+
 export interface Field {
   id: string;
   name: string;
@@ -8,6 +14,10 @@ export interface Field {
   options?: Array<{ value: string; label: string }>;
   defaultValue?: boolean | string;
 }
+
+export type TextFieldProps = BaseField & {
+  placeholder?: string;
+};
 
 export interface Section {
   id: string;
