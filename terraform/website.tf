@@ -1,9 +1,10 @@
 module "website" {
-  source              = "github.com/araltiparmak/terraform-modules//static-site?ref=v1.1.0"
+  source              = "github.com/araltiparmak/terraform-modules//static-site?ref=v1.1.1"
   domain_name         = local.bucket
   with_cloudfront     = true
   cloudfront_aliases  = ["formsmith.araltiparmak.com"]
   acm_certificate_arn = local.acm_certificate_arn
+  error_document      = "index.html"
 }
 
 data "aws_secretsmanager_secret" "acm_cert" {
