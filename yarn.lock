@@ -458,10 +458,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.23.0, @eslint/js@npm:^9.23.0":
+"@eslint/js@npm:9.23.0":
   version: 9.23.0
   resolution: "@eslint/js@npm:9.23.0"
   checksum: 10c0/4e70869372b6325389e0ab51cac6d3062689807d1cef2c3434857571422ce11dde3c62777af85c382b9f94d937127598d605d2086787f08611351bf99faded81
+  languageName: node
+  linkType: hard
+
+"@eslint/js@npm:^9.36.0":
+  version: 9.36.0
+  resolution: "@eslint/js@npm:9.36.0"
+  checksum: 10c0/e3f6fb7d6f117d79615574f7bef4f238bcfed6ece0465d28226c3a75d2b6fac9cc189121e8673562796ca8ccea2bf9861715ee5cf4a3dbef87d17811c0dac22c
   languageName: node
   linkType: hard
 
@@ -3370,7 +3377,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ui-engine@workspace:."
   dependencies:
-    "@eslint/js": "npm:^9.23.0"
+    "@eslint/js": "npm:^9.36.0"
     "@headlessui/react": "npm:^2.2.0"
     "@heroicons/react": "npm:^2.2.0"
     "@tailwindcss/vite": "npm:^4.1.2"
